@@ -29,12 +29,16 @@
 .result-wrap{
     display: flex;
     flex-direction: column;
+
+
     padding: 8px 29px;
     align-items: center;
     gap: 10px;
-
     border-radius: 15px;
     background: rgba(217, 217, 217, 0.30);
-
     box-shadow: 7px 10px 25px 0px rgba(152, 221, 159, 0.30);
+}
+
+.result-wrap:hover{
+    box-shadow: 7px 10px 25px 0px rgba(210, 151, 36, 0.30);
 }
