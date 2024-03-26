@@ -2,7 +2,7 @@ import Searchcomp from "./Searchcomp"
 import '../styles/Maincomp-style.css'
 import foodimg from '../img/food-img.png'
 
-const Maincomp = () => {
+const Maincomp = ({ setFoodListData, setSearchAttempted }) => {
 
 
   return (
@@ -13,8 +13,8 @@ const Maincomp = () => {
       <div className="main-content">
         <div className="content">
             <div className="search-div">
-              <h1>Food App</h1>
-              <Searchcomp/>
+              <h1>Epic Eats</h1>
+              <Searchcomp setFoodListData={setFoodListData} setSearchAttempted={setSearchAttempted} />
             </div>
             <img className="food-img" src={foodimg} alt="" />
         </div>

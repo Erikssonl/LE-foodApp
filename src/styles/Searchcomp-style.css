@@ -4,6 +4,7 @@
     display: flex;
     align-items: center;
     gap: 10px;
+    
 }
 .search-input{
     padding: 5px 30px 5px 20px;

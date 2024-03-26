@@ -10,7 +10,8 @@
 .body{
   display: flex;
   background: #F2F2F2;
-  
+  justify-content: center;
+  align-items: center;
 }
 
 * {
@@ -22,9 +23,22 @@
 
 h1 {
   font-size: var(--h1-font-size);
-  font-weight: var(--h1-font-weight);
-  line-height: var(--h1-line-height);
+  font-weight: var(--main-font-weight);
+  line-height: var(--main-line-height);
 }
+
+h2 {
+  font-size: var(--h2-font-size);
+  font-weight: var(--main-font-weight);
+  line-height: var(--main-line-height);
+}
+
+h3 {
+  font-size: var(--h3font-size);
+  font-weight: var(--main-font-weight);
+  line-height: var(--main-line-height);
+}
+
 
 
 
