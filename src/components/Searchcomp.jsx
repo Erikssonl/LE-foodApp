@@ -1,5 +1,6 @@
 import { useRef, useState, useEffect } from 'react'
 import Foodlist from './Foodlist'
+import '../styles/Searchcomp-style.css'
 
 const Searchcomp = () => {
     const [foodListData, setFoodListData] = useState([])
@@ -30,9 +31,9 @@ const Searchcomp = () => {
 
   return (
     <>
-        <div>
-            <input type="text" ref={searchInput} placeholder="What meal or food-category ar you looking for? "/>
-            <button onClick={searchHandler}>Search</button>
+        <div className='search-wrap'>
+            <input className='search-input' type="text" ref={searchInput} placeholder="What meal or food-category ar you looking for? "/>
+            <button className='search-btn' onClick={searchHandler}>Search</button>
         </div>
         <div>
             <Foodlist foodListData={foodListData} searchAttempted={searchAttempted}/>
