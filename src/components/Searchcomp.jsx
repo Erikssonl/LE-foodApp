@@ -1,5 +1,4 @@
 import { useRef, useState, useEffect } from 'react'
-import Foodlist from './Foodlist'
 import '../styles/Searchcomp-style.css'
 
 const Searchcomp = ({ setFoodListData, setSearchAttempted }) => {
