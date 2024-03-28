@@ -1,16 +1,15 @@
 .main-content{
     display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    width: 100vw;
     height: 85vh;
 }
 
 .content{
+    width: 100vw;
     display: flex;
-    gap: 216px;
+    gap: 116px;
     align-items: center;
+    justify-content: space-around;
+
 }
 
 .search-div{
