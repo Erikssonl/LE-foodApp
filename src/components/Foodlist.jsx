@@ -1,25 +1,23 @@
 import '../styles/Foodlistcomp-style.css'
+import FoodItemcomp from './FoodItemcomp';
 
-const Foodlist = ({foodListData, searchAttempted}) => {
+const Foodlist = ({foodListData, searchAttempted, setFoodId}) => {
+
+
 
     if (!searchAttempted) {
         return null;
     }
-
     return (
     <div className='foodlist-wrap'>
 
         <div className="fooddata-wrap">
             {foodListData?.length > 0 ? (
                 foodListData.map((food, index) => (
-                    <div className='result-wrap' key={index}>
-                        <img className='result-img' src={food.strMealThumb} alt={food.strMeal}/>
-                        <h2>{food.strMeal}</h2>
-                        <h3>{food.strCategory}</h3>
-                    </div>
+                    <FoodItemcomp food={food} index={index} setFoodId={setFoodId} />
                 ))
             ) : (
-                searchAttempted && <h3>No results found</h3>
+                searchAttempted && <h2>No results found</h2>
             )}
         </div>
     </div>
