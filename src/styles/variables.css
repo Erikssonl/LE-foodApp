@@ -1,0 +1,22 @@
+:root {
+    /* font styling */
+    --main-font-weight: 400;
+    --main-line-height: normal;
+
+    /* h1 styling */
+    --h1-font-size: 64px;
+
+    /* h2 styling */
+    --h2-font-size: 20px;
+
+    /* h3 styling */
+    --h3-font-size: 16px;
+
+    /* button styling */
+    --btn-background-color: #98DD9F;
+    --btn-border: 1px solid #000;
+    --btn-boder-radius: 10px;
+    --btn-padding: 5px 10px;
+    --btn-font-size: 16px;
+    --btn-hover-color: #D29724;
+}

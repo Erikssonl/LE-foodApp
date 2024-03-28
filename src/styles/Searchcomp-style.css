@@ -1,0 +1,31 @@
+@import "./variables.css";
+
+.search-wrap{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    
+}
+.search-input{
+    padding: 5px 30px 5px 20px;
+    border-radius: 10px;
+    border: 1px solid #000;
+    background: #FFF;
+    color: rgba(0, 0, 0, 0.50);
+    font-family: "Inknut Antiqua";
+    font-size: 16px;
+    font-weight: 400;
+    width: 470px;
+}
+
+.search-btn{
+    background-color: var(--btn-background-color);
+    border: var(--btn-border);
+    border-radius: var(--btn-boder-radius);
+    padding: var(--btn-padding);
+    font-size: var(--btn-font-size);
+}
+
+.search-btn:hover{
+    background-color: var(--btn-hover-color);
+}
