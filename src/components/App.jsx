@@ -2,7 +2,8 @@ import { useState } from 'react'
 import '../styles/App.css'
 import Maincomp from './Maincomp'
 import Foodlist from './Foodlist';
-import FoodDetailscomp from './FoodDetailscomp';
+import Fooddetailscomp from './Fooddetailscomp';
+
 
 function App() {
   const [foodListData, setFoodListData] = useState([]);
@@ -12,7 +13,7 @@ function App() {
   return (
     <>
       <Maincomp setFoodListData={setFoodListData} setSearchAttempted={setSearchAttempted} />
-      <FoodDetailscomp />
+      <Fooddetailscomp foodId={foodId}/>
       <Foodlist foodListData={foodListData} searchAttempted={searchAttempted} setFoodId={setFoodId} />
     </>
   )
