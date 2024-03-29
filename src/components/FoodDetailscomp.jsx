@@ -1,3 +1,4 @@
+import '../styles/Fooddetailscomp-style.css'
 import {useEffect, useState } from 'react'
 
 const Fooddetailscomp = ({foodId}) => {
@@ -53,26 +54,32 @@ const Fooddetailscomp = ({foodId}) => {
         <div>
             {detailsData?.length > 0 ? (
                 detailsData.map((details, index) =>
-                <div key={index}>
-                    <h2>{details.strMeal}</h2>
-                    <h3>{details.strCategory}</h3>
-                    <img className='result-img' src={details.strMealThumb} alt={details.strMeal}/>
-                    <div>
-
-                        <h3>Ingredients</h3>
-                        <ul>
-                            {details.ingredients.map((ingredient, i) => (
-                                <li key={i}> {ingredient} </li>
-                            ))}
-
-                        </ul>
+                <div className='content-wrap' key={index}>
+                    <div className='detail-head'>
+                        <div className='detail-title'>
+                            <h2>{details.strMeal}</h2>
+                            <h3>{details.strCategory}</h3>
+                        </div>
+                        <button className='detailBtn'>X Close</button>
                     </div>
-                    <div>
-                        <h3>Instructions</h3>
-                        <p>{details.strInstructions}</p>
-                    </div>
-                    <div>
-                        {details.strYoutube}
+                    <div className='detail-wrap'>
+                        <div className='ingredient-wrap'>
+                            <h3>Ingredients</h3>
+                            <ul>
+                                {details.ingredients.map((ingredient, i) => (
+                                    <li key={i}> {ingredient} </li>
+                                    ))}
+
+                            </ul>
+                        </div>
+                            <img className='detail-img' src={details.strMealThumb} alt={details.strMeal}/>
+                        <div className='instructions-wrap'>
+                            <h3>Instructions</h3>
+                            <p>{details.strInstructions}</p>
+                        </div>
+                        {/* <div>
+                            {details.strYoutube}
+                        </div> */}
                     </div>
                 </div>
                 )
