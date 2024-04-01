@@ -1,9 +1,12 @@
 import '../styles/Foodlistcomp-style.css'
 
-const FoodItemcomp = ({food , index, setFoodId}) => {
+const FoodItemcomp = ({food , index, setFoodId, setdetailmodalOpen}) => {
     const FoodDetailhHandler = () => {
         setFoodId(food.idMeal);
+        setdetailmodalOpen(true);
     }
+
+
   return (
     <div>
         <div onClick={FoodDetailhHandler} className='result-wrap' key={index}>

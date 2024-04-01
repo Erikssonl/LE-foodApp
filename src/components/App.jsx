@@ -9,12 +9,15 @@ function App() {
   const [foodListData, setFoodListData] = useState([]);
   const [searchAttempted, setSearchAttempted] = useState(false);
   const [foodId, setFoodId] = useState("");
+  const [detailmodalOpen, setdetailmodalOpen] = useState(false);
 
   return (
     <>
       <Maincomp setFoodListData={setFoodListData} setSearchAttempted={setSearchAttempted} />
-      <Fooddetailscomp foodId={foodId} setFoodId={setFoodId}/>
-      <Foodlist foodListData={foodListData} searchAttempted={searchAttempted} setFoodId={setFoodId} />
+      {detailmodalOpen &&(
+        <Fooddetailscomp foodId={foodId} setFoodId={setFoodId} setdetailmodalOpen={setdetailmodalOpen}/>
+      )}
+      <Foodlist foodListData={foodListData} searchAttempted={searchAttempted} setFoodId={setFoodId} setdetailmodalOpen={setdetailmodalOpen} />
     </>
   )
 }

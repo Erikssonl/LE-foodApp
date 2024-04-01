@@ -1,7 +1,7 @@
 import '../styles/Fooddetailscomp-style.css'
 import {useEffect, useState } from 'react'
 
-const Fooddetailscomp = ({ foodId, setFoodId }) => {
+const Fooddetailscomp = ({ foodId, setFoodId, setdetailmodalOpen }) => {
     const [detailsData, setDetailsData] = useState([]);
 
     useEffect(() => {
@@ -46,20 +46,21 @@ const Fooddetailscomp = ({ foodId, setFoodId }) => {
 
     const CloseBtnHandler = () => {
         setFoodId([]);
+        setdetailmodalOpen(false);
     }
 
   return (
 
     <>
-        <div>
+        <div className='modal-container'>
             {detailsData.map((details, index) =>
             <div className='content-wrap' key={index}>
                 <div className='detail-head'>
                     <div className='detail-title'>
-                        <h2>{details.strMeal}</h2>
-                        <h3>{details.strCategory}</h3>
+                        <h1>{details.strMeal}</h1>
+                        <h2>{details.strCategory}</h2>
                     </div>
-                    <button onClick={CloseBtnHandler} className='detailBtn'>X Close</button>
+                    <button onClick={CloseBtnHandler} className='detailBtn'>&times; Close</button>
                 </div>
                 <div className='detail-wrap'>
                     <div className='ingredient-wrap'>
@@ -76,9 +77,9 @@ const Fooddetailscomp = ({ foodId, setFoodId }) => {
                         <h3>Instructions</h3>
                         <p>{details.strInstructions}</p>
                     </div>
-                    <div>
-                        <iframe width="420" height="315" src={`https://www.youtube.com/embed/${details.strYoutube.substring(details.strYoutube.indexOf("=") + 1)}`} frameborder="0"></iframe>
-                    </div>
+                    {/* <div className='iframe-wrap'>
+                        <iframe src={`https://www.youtube.com/embed/${details.strYoutube.substring(details.strYoutube.indexOf("=") + 1)}`} frameborder="0"></iframe>
+                    </div> */}
                 </div>
             </div>
             )}
