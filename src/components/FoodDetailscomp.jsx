@@ -1,8 +1,8 @@
+import '../styles/Fooddetailscomp-style.css'
 import {useEffect, useState } from 'react'
 
-const Fooddetailscomp = ({foodId}) => {
+const Fooddetailscomp = ({ foodId, setFoodId, setdetailmodalOpen }) => {
     const [detailsData, setDetailsData] = useState([]);
-    const [fetchAttemted, setFetchAttemted] = useState(false)
 
     useEffect(() => {
         if (foodId) {
@@ -36,7 +36,6 @@ const Fooddetailscomp = ({foodId}) => {
                     } else {
                         setDetailsData([]);
                     }
-                    setFetchAttemted(true)
                 })
                 .catch((error) => {
                     console.error("Fetching error:", error);
@@ -45,40 +44,45 @@ const Fooddetailscomp = ({foodId}) => {
         }
     }, [foodId])
 
-
+    const CloseBtnHandler = () => {
+        setFoodId([]);
+        setdetailmodalOpen(false);
+    }
 
   return (
 
     <>
-        <div>
-            {detailsData?.length > 0 ? (
-                detailsData.map((details, index) =>
-                <div key={index}>
-                    <h2>{details.strMeal}</h2>
-                    <h3>{details.strCategory}</h3>
-                    <img className='result-img' src={details.strMealThumb} alt={details.strMeal}/>
-                    <div>
-
+        <div className='modal-container'>
+            {detailsData.map((details, index) =>
+            <div className='content-wrap' key={index}>
+                <div className='detail-head'>
+                    <div className='detail-title'>
+                        <h1>{details.strMeal}</h1>
+                        <h2>{details.strCategory}</h2>
+                    </div>
+                    <button onClick={CloseBtnHandler} className='detailBtn'>&times; Close</button>
+                </div>
+                <div className='detail-wrap'>
+                    <div className='ingredient-wrap'>
                         <h3>Ingredients</h3>
                         <ul>
                             {details.ingredients.map((ingredient, i) => (
                                 <li key={i}> {ingredient} </li>
-                            ))}
+                                ))}
 
                         </ul>
                     </div>
-                    <div>
+                        <img className='detail-img' src={details.strMealThumb} alt={details.strMeal}/>
+                    <div className='instructions-wrap'>
                         <h3>Instructions</h3>
                         <p>{details.strInstructions}</p>
                     </div>
-                    <div>
-                        {details.strYoutube}
-                    </div>
+                    {/* <div className='iframe-wrap'>
+                        <iframe src={`https://www.youtube.com/embed/${details.strYoutube.substring(details.strYoutube.indexOf("=") + 1)}`} frameborder="0"></iframe>
+                    </div> */}
                 </div>
-                )
-                ) : (
-                    fetchAttemted && <h2>No results found</h2>
-                )}
+            </div>
+            )}
         </div>
     
     </>
