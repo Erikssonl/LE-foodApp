@@ -13,7 +13,7 @@ function App() {
   return (
     <>
       <Maincomp setFoodListData={setFoodListData} setSearchAttempted={setSearchAttempted} />
-      <Fooddetailscomp foodId={foodId}/>
+      <Fooddetailscomp foodId={foodId} setFoodId={setFoodId}/>
       <Foodlist foodListData={foodListData} searchAttempted={searchAttempted} setFoodId={setFoodId} />
     </>
   )
