@@ -6,7 +6,6 @@ const FoodItemcomp = ({food , index, setFoodId, setdetailmodalOpen}) => {
         setdetailmodalOpen(true);
     }
 
-
   return (
     <div>
         <div onClick={FoodDetailhHandler} className='result-wrap' key={index}>

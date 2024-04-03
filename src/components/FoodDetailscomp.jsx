@@ -75,7 +75,9 @@ const FoodDetailscomp = ({ foodId, setFoodId, setdetailmodalOpen }) => {
                         <img className='detail-img' src={details.strMealThumb} alt={details.strMeal}/>
                     <div className='instructions-wrap'>
                         <h3>Instructions</h3>
-                        <p>{details.strInstructions}</p>
+                        {details.strInstructions.split('\n\r').map((instr, idx) => (
+                            <p key={idx}>{instr}</p>
+                        ))}
                     </div>
                     {/* <div className='iframe-wrap'>
                         <iframe src={`https://www.youtube.com/embed/${details.strYoutube.substring(details.strYoutube.indexOf("=") + 1)}`} frameborder="0"></iframe>
