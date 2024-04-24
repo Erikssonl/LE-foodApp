@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react'
 import '../styles/Searchcomp-style.css'
 
-const Searchcomp = ({ setFoodListData, setSearchAttempted }) => {
+const SearchComp = ({ setFoodListData, setSearchAttempted }) => {
     const [searchData, setSearchData] = useState('')
     const searchInput = useRef()
 
@@ -34,4 +34,4 @@ const Searchcomp = ({ setFoodListData, setSearchAttempted }) => {
     </>
   )
 }
-export default Searchcomp
+export default SearchComp

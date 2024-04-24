@@ -1,7 +1,7 @@
 import '../styles/Fooddetailscomp-style.css'
 import {useEffect, useState } from 'react'
 
-const FoodDetailscomp = ({ foodId, setFoodId, setdetailmodalOpen }) => {
+const FoodDetailsComp = ({ foodId, setFoodId, setdetailmodalOpen }) => {
     const [detailsData, setDetailsData] = useState([]);
 
     useEffect(() => {
@@ -83,4 +83,4 @@ const FoodDetailscomp = ({ foodId, setFoodId, setdetailmodalOpen }) => {
     </>
   )
 }
-export default FoodDetailscomp
+export default FoodDetailsComp

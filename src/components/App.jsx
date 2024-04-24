@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import '../styles/App.css'
-import Maincomp from './Maincomp'
-import Foodlist from './Foodlist';
-import FoodDetailscomp from './FoodDetailscomp';
+import MainComp from './MainComp'
+import FoodList from './FoodList';
+import FoodDetailsComp from './FoodDetailsComp';
 
 
 function App() {
@@ -13,11 +13,11 @@ function App() {
 
   return (
     <>
-      <Maincomp setFoodListData={setFoodListData} setSearchAttempted={setSearchAttempted} />
+      <MainComp setFoodListData={setFoodListData} setSearchAttempted={setSearchAttempted} />
       {detailmodalOpen &&(
-        <FoodDetailscomp foodId={foodId} setFoodId={setFoodId} setdetailmodalOpen={setdetailmodalOpen}/>
+        <FoodDetailsComp foodId={foodId} setFoodId={setFoodId} setdetailmodalOpen={setdetailmodalOpen}/>
       )}
-      <Foodlist foodListData={foodListData} searchAttempted={searchAttempted} setFoodId={setFoodId} setdetailmodalOpen={setdetailmodalOpen} />
+      <FoodList foodListData={foodListData} searchAttempted={searchAttempted} setFoodId={setFoodId} setdetailmodalOpen={setdetailmodalOpen} />
     </>
   )
 }

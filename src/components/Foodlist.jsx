@@ -1,7 +1,7 @@
 import '../styles/Foodlistcomp-style.css'
-import FoodItemcomp from './FoodItemcomp';
+import FoodItemComp from './FoodItemComp';
 
-const Foodlist = ({foodListData, searchAttempted, setFoodId, setdetailmodalOpen}) => {
+const FoodList = ({foodListData, searchAttempted, setFoodId, setdetailmodalOpen}) => {
 
     if (!searchAttempted) {
         return null;
@@ -12,7 +12,7 @@ const Foodlist = ({foodListData, searchAttempted, setFoodId, setdetailmodalOpen}
         <div className="fooddata-wrap">
             {foodListData?.length > 0 ? (
                 foodListData.map((food, index) => (
-                    <FoodItemcomp food={food} index={index} setFoodId={setFoodId} setdetailmodalOpen={setdetailmodalOpen} />
+                    <FoodItemComp food={food} index={index} setFoodId={setFoodId} setdetailmodalOpen={setdetailmodalOpen} />
                 ))
             ) : (
                 searchAttempted && <h2>No results found</h2>
@@ -21,4 +21,4 @@ const Foodlist = ({foodListData, searchAttempted, setFoodId, setdetailmodalOpen}
     </div>
     )
 }
-export default Foodlist
+export default FoodList

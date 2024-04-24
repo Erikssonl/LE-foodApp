@@ -1,8 +1,8 @@
-import Searchcomp from "./Searchcomp"
+import SearchComp from "./SearchComp"
 import '../styles/Maincomp-style.css'
 import foodimg from '../img/food-img.png'
 
-const Maincomp = ({ setFoodListData, setSearchAttempted }) => {
+const MainComp = ({ setFoodListData, setSearchAttempted }) => {
 
 
   return (
@@ -15,7 +15,7 @@ const Maincomp = ({ setFoodListData, setSearchAttempted }) => {
         <div className="content">
             <div className="search-div">
               <h1>Epic Eats</h1>
-              <Searchcomp setFoodListData={setFoodListData} setSearchAttempted={setSearchAttempted} />
+              <SearchComp setFoodListData={setFoodListData} setSearchAttempted={setSearchAttempted} />
             </div>
             <img className="food-img" src={foodimg} alt="" />
         </div>
@@ -27,4 +27,4 @@ const Maincomp = ({ setFoodListData, setSearchAttempted }) => {
     </>
   )
 }
-export default Maincomp
+export default MainComp

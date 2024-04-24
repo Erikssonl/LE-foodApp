@@ -1,6 +1,6 @@
 import '../styles/Foodlistcomp-style.css'
 
-const FoodItemcomp = ({food , index, setFoodId, setdetailmodalOpen}) => {
+const FoodItemComp = ({food , index, setFoodId, setdetailmodalOpen}) => {
     const FoodDetailhHandler = () => {
       setFoodId(food.idMeal);
       setdetailmodalOpen(true);
@@ -16,4 +16,4 @@ const FoodItemcomp = ({food , index, setFoodId, setdetailmodalOpen}) => {
     </div>
   )
 }
-export default FoodItemcomp
+export default FoodItemComp
