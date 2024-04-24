@@ -15,7 +15,8 @@
 .result-img{
     height: 30vh;
     width: 15vw;
-    border-radius: 50%;
+    border-radius: 15px;
+    object-fit: cover;
 }
 
 .result-wrap{

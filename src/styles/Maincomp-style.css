@@ -1,14 +1,10 @@
 .main-content{
     display: inline-flex;
-    /* align-items: center;
-    justify-content: center; */
-    /* height: 85vh; */
     margin-top: 15vh;
     margin-left: 7vw;
 }
 
 .content{
-    /* width: 100vw; */
     display: flex;
     gap: 15vw;
     align-items: center;

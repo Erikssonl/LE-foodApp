@@ -69,13 +69,12 @@
     background: #F2F2F2;
     text-align: left;
     padding: 15px;
-    
 }
 
 .detail-img{
     max-height: 70vh;
     max-width: 100%;
-    border-radius: 50%;
+    border-radius: 15px;
     object-fit: cover;
     align-self: center;
     padding-bottom: 5px;

@@ -3,7 +3,6 @@ import '../styles/Searchcomp-style.css'
 
 const Searchcomp = ({ setFoodListData, setSearchAttempted }) => {
     const [searchData, setSearchData] = useState('')
-
     const searchInput = useRef()
 
     useEffect(() => {

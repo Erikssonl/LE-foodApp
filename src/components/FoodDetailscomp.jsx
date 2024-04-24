@@ -12,7 +12,6 @@ const FoodDetailscomp = ({ foodId, setFoodId, setdetailmodalOpen }) => {
                     if (data.meals && data.meals.length > 0){
                         const mealDetails = data.meals[0];
                         const ingredients = [];
-
                         let i = 1;
                         while (true) {
                             const ingredientKey = `strIngredient${i}`;
@@ -22,14 +21,11 @@ const FoodDetailscomp = ({ foodId, setFoodId, setdetailmodalOpen }) => {
 
                             if (!ingredient || ingredient === "null" || !ingredient.trim()) break;
 
-
                             if (measure && measure !== "null" && measure.trim()) {
                                 ingredients.push(`${ingredient} - ${measure}`);
                             } else {
-
                                 ingredients.push(ingredient);
                             }
-
                             i++;
                         }
                         setDetailsData([{...mealDetails, ingredients}]);
@@ -50,7 +46,6 @@ const FoodDetailscomp = ({ foodId, setFoodId, setdetailmodalOpen }) => {
     }
 
   return (
-
     <>
         <div className='modal-container'>
             {detailsData.map((details, index) =>
@@ -68,15 +63,14 @@ const FoodDetailscomp = ({ foodId, setFoodId, setdetailmodalOpen }) => {
                         <ul>
                             {details.ingredients.map((ingredient, i) => (
                                 <li key={i}> {ingredient} </li>
-                                ))}
-
+                            ))}
                         </ul>
                     </div>
                         <img className='detail-img' src={details.strMealThumb} alt={details.strMeal}/>
                     <div className='instructions-wrap'>
                         <h3>Instructions</h3>
                         {details.strInstructions.split('\n\r').map((instr, idx) => (
-                            <p key={idx}>{instr}</p>
+                            <p style={{ padding: '5px' }} key={idx}>{instr}</p>
                         ))}
                     </div>
                     {/* <div className='iframe-wrap'>
@@ -86,7 +80,6 @@ const FoodDetailscomp = ({ foodId, setFoodId, setdetailmodalOpen }) => {
             </div>
             )}
         </div>
-    
     </>
   )
 }

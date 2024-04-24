@@ -2,8 +2,8 @@ import '../styles/Foodlistcomp-style.css'
 
 const FoodItemcomp = ({food , index, setFoodId, setdetailmodalOpen}) => {
     const FoodDetailhHandler = () => {
-        setFoodId(food.idMeal);
-        setdetailmodalOpen(true);
+      setFoodId(food.idMeal);
+      setdetailmodalOpen(true);
     }
 
   return (
