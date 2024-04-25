@@ -1,4 +1,4 @@
-import '../styles/Fooddetailscomp-style.css'
+import '../styles/FoodDetailsComp-style.css'
 import {useEffect, useState } from 'react'
 
 const FoodDetailsComp = ({ foodId, setFoodId, setdetailmodalOpen }) => {

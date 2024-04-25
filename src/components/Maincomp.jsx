@@ -1,5 +1,5 @@
 import SearchComp from "./SearchComp"
-import '../styles/Maincomp-style.css'
+import '../styles/MainComp-style.css'
 import foodimg from '../img/food-img.png'
 
 const MainComp = ({ setFoodListData, setSearchAttempted }) => {

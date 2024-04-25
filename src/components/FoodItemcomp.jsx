@@ -1,4 +1,4 @@
-import '../styles/Foodlistcomp-style.css'
+import '../styles/FoodListComp-style.css'
 
 const FoodItemComp = ({food , index, setFoodId, setdetailmodalOpen}) => {
     const FoodDetailhHandler = () => {
