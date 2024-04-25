@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import '../styles/App.css'
-import MainComp from './MainComp'
+import MainComp from './MainComp';
 import FoodList from './FoodList';
 import FoodDetailsComp from './FoodDetailsComp';
 
