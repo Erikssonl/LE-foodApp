@@ -1,4 +1,4 @@
-# React + Vite
+# LE-Food app. EpicEats
 
 This is an individual school project where i created a foodapplication. Users can search for food dishes and access recipes with ingredient lists and instructions.
 The application is built with React.js and utilizes MealDB's open API. 
