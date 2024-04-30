@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import './styles/App.css'
-import MainComp from './components/MainComp';
-import FoodList from './components/FoodList';
-import FoodDetailsComp from './components/FoodDetailsComp';
+import MainComp from "./components/MainComp";
+import FoodList from "./components/FoodList";
+import FoodDetailsComp from "./components/FoodDetailsComp";
 
 
 function App() {
